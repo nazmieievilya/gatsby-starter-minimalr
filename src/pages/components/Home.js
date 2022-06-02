@@ -32,6 +32,8 @@ const LandingText = styled.div`
   color: white;
 
 `
+  
+
 const Home = () => {
   return (
     <HomeContainer>

@@ -1,11 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import "./NavBar.css"
+import { useState, useEffect } from 'react'
 
 
 const NavBar = () => {
+    
+    const [background,  setBackground] = useState(false)
+
+   
+    
+    useEffect(() => {
+        const changeBackground = () => {
+            if(window.scrollY > 200) {
+                setBackground(true)
+            } else{
+                setBackground(false)
+            }
+        }
+        window.addEventListener('scroll', changeBackground);
+        return () => window.removeEventListener('scroll', changeBackground)
+      }, []);
+    const backgroundClor = {
+        color: "white",
+        backgroundColor: "rgb(0, 0, 0, 0)",
+        transition: "1s ease all"
+    }
+    const backgroundClorActive = {
+        backgroundColor: "white",
+        color: "black",
+        transition: "1s ease all"
+    }
+
+    console.log(background)
   return (
-    <NavContainer>
+    <NavContainer style={ background ? backgroundClorActive : backgroundClor } >
         <h5>something</h5>
             <List>
                 <li>home</li>
@@ -28,8 +57,6 @@ const NavContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 40px;
-    background-color: rgb(0, 0, 0, 0);
-    color: white;
     width: 100%;
     position: fixed;
 `

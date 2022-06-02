@@ -3,23 +3,9 @@ import styled from 'styled-components'
 
 
 const NavBar = () => {
-   
-    const NavContainer = styled.div`
-    color: black;
-    background-color: white;
-    padding-right: 10px ;
-    padding-left: 10px ;
-    z-index: 50;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    width: 100%;
-    position: fixed;
-`
+ 
   return (
-    <NavContainer  >
+    <NavContainer>
         <h5>something</h5>
             <List>
                 <li>home</li>
@@ -33,6 +19,22 @@ const NavBar = () => {
     </NavContainer>
   )
 }
+
+  
+const NavContainer = styled.div`
+color: black;
+background-color: white;
+padding-right: 10px ;
+padding-left: 10px ;
+z-index: 50;
+top: 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 40px;
+width: 100%;
+position: fixed;
+`
 
 const List = styled.ul`
     height: 100%;

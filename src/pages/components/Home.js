@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components"
+import { StaticImage } from 'gatsby-plugin-image'
 
 const HomeContainer = styled.div`
 position: relative;
@@ -17,6 +18,7 @@ padding: 40px;
   justify-content: space-around;
   width: 100%;
   height: 100%;
+
 
 `
 const LandingText = styled.div`
@@ -45,7 +47,11 @@ const Home = () => {
           </p>
         </LandingText>
       </TextContainer>
-        
+      <StaticImage 
+          style={{position: "absolute", width: "100%", height: "100%"}}
+          src='../../images/home.png'
+          alt='jopa'
+        />
     </HomeContainer>
   )
 }

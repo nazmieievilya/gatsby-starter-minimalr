@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
-// import { StaticImage } from 'gatsby-plugin-image'
-import { useEffect, useState } from "react";
+import { StaticImage } from 'gatsby-plugin-image'
+
 const HomeContainer = styled.div`
 position: relative;
     width: 100%;
@@ -32,8 +32,6 @@ const LandingText = styled.div`
 
 `
 const Home = () => {
-
- 
   return (
     <HomeContainer>
       <TextContainer>
@@ -48,14 +46,11 @@ const Home = () => {
           </p>
         </LandingText>
       </TextContainer>
-      <div  >
-        {/* <StaticImage 
-            style={{position: "fixed", width: "100%", height: "100%"}}
-            src='../../images/home.png'
-            alt='jopa'
-          /> */}
-      </div>
-        
+        <StaticImage 
+          style={{position: "absolute", width: "100%", height: "100%"}}
+          src='../../images/home.png'
+          alt='jopa'
+        />
     </HomeContainer>
   )
 }

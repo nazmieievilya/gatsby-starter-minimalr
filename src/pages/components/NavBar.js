@@ -1,15 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import './NavBar.css'
 
 
 
 const NavBar = () => {
-
-    
-
   return (
-    <div className="navigationBar active" >
+    <NavContainer>
         <h5>something</h5>
             <List>
                 <li>home</li>
@@ -20,10 +16,23 @@ const NavBar = () => {
             <button className='btn btn-primary btn-sm me-2' >Sign Up</button>
             <button className='btn btn-light btn-sm me-2' >Log In</button>
         </div>
-    </div>
+    </NavContainer>
   )
 }
-
+const NavContainer = styled.div`
+    padding-right: 10px ;
+    padding-left: 10px ;
+    z-index: 50;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background-color: rgb(0, 0, 0, 0);
+    color: white;
+    width: 100%;
+    position: fixed;
+`
 const List = styled.ul`
     height: 100%;
     margin: 0;

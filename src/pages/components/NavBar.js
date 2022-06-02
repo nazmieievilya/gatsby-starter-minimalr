@@ -33,8 +33,22 @@ const NavBar = () => {
     }
 
     console.log(background)
+    const NavContainer = styled.div`
+    color: ${ background ? "black" : "white" };
+    background-color: ${ background ? "white" : "transparant" };
+    padding-right: 10px ;
+    padding-left: 10px ;
+    z-index: 50;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    position: fixed;
+`
   return (
-    <NavContainer style={ background ? backgroundClorActive : backgroundClor } >
+    <NavContainer  >
         <h5>something</h5>
             <List>
                 <li>home</li>
@@ -48,18 +62,7 @@ const NavBar = () => {
     </NavContainer>
   )
 }
-const NavContainer = styled.div`
-    padding-right: 10px ;
-    padding-left: 10px ;
-    z-index: 50;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 40px;
-    width: 100%;
-    position: fixed;
-`
+
 const List = styled.ul`
     height: 100%;
     margin: 0;

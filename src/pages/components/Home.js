@@ -3,14 +3,15 @@ import styled from "styled-components"
 import { StaticImage } from 'gatsby-plugin-image'
 
 const HomeContainer = styled.div`
-position: relative;
+  position: relative;
     width: 100%;
     height: 700px;
     z-index: -5;
+    
 
 `
 const TextContainer = styled.div`
-padding: 40px;
+  padding: 40px;
   background-color: rgb(0,0,0, 0.7);
   position: absolute;
   z-index: 10;
@@ -18,6 +19,8 @@ padding: 40px;
   justify-content: space-around;
   width: 100%;
   height: 100%;
+  
+
 
 
 `
@@ -30,6 +33,7 @@ const LandingText = styled.div`
   margin-top: 40px;
   font-weight: 5;
   color: white;
+  font-size: 3vw;
 
 `
   
@@ -49,11 +53,14 @@ const Home = () => {
           </p>
         </LandingText>
       </TextContainer>
-      <StaticImage 
-          style={{position: "absolute", width: "100%", height: "100%"}}
-          src='../../images/home.png'
-          alt='jopa'
-        />
+      <span >
+        <StaticImage 
+            style={{position: "fixed", width: "100%", height: "100%"}}
+            src='../../images/home.png'
+            alt='jopa'
+          />
+      </span>
+      
     </HomeContainer>
   )
 }

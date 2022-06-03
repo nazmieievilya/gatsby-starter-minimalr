@@ -7,15 +7,16 @@ const NavBar = () => {
   return (
     <NavContainer>
         <h5>something</h5>
-            <List>
+            <List  >
                 <li>home</li>
                 <li>features</li>
                 <li>contact</li>
             </List>
-        <div>
+        <div className='buttons' >
             <button className='btn btn-primary btn-sm me-2' >Sign Up</button>
             <button className='btn btn-light btn-sm me-2' >Log In</button>
         </div>
+        <p>menu</p>
     </NavContainer>
   )
 }
@@ -34,6 +35,21 @@ align-items: center;
 height: 40px;
 width: 100%;
 position: fixed;
+font-size: 2vw;
+@media (max-width: 768px) {
+  .buttons {
+      
+    display: none;
+    visibility: hidden;
+  }
+  }
+
+@media (max-width: 600px) {
+  font-size: 3vw;
+}
+
+
+
 `
 
 const List = styled.ul`
@@ -45,5 +61,10 @@ const List = styled.ul`
 		display: inline;
         margin-right: 5px ;
 	}
+
+  @media (max-width: 768px) {
+    display: none;
+    visibility: hidden;
+  }
 `
 export default NavBar

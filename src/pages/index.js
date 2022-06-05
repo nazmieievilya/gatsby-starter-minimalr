@@ -6,7 +6,6 @@ import NavBar from "./components/NavBar"
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from "./components/Home";
 import Features from './components/Features'
-import Features2 from "./components/Features2"
 const IndexPage = () => {
  
  

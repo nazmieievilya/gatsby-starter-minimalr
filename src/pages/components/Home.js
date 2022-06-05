@@ -33,11 +33,7 @@ const LandingText = styled.div`
   margin-top: 40px;
   font-weight: 5;
   color: white;
-  font-size: 2vw;
-  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
-  @media (max-width: 768px) {
-    font-size: 3vw;
-  }
+  font-size: 3vw;
 
 `
   
@@ -50,7 +46,6 @@ const Home = () => {
           <h2>
             Real Estate Company
           </h2>
-          <i class="bi bi-wifi-2"></i>
         </LandingText>
         <LandingText>
           <p>

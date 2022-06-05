@@ -15,6 +15,7 @@ const IndexPage = () => {
       <NavBar />
       <Home />
       <Features />
+      
     </>
     
   )

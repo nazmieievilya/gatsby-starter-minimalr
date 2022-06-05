@@ -53,38 +53,73 @@ const FeaturesContainer = styled.div`
 
 
 `
+
+
+const GridContainer = styled.div`
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10px;
+  .element {
+    width: 400px;
+    height: 400px;
+    background-color: pink;
+
+  }
+  @media (max-width: 425px) {
+    .element {
+    width: 90vw;
+    height: 90vw;
+    margin: 5vw;;
+  }
+  }
+
+`
+
+
 const Features = () => {
   return (
-    <FeaturesContainer>
-      
-      <div   >
-      <h2 id='maint' className='m-4' >Buying a home shouldn't be a mystery</h2>
-      </div>
-        <div id="contents" className='d-flex f-direction-column justify-content-center align-items-center ' >
-          <div  id='texts' >
-            <p  >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo
-            </p>
-            <br />
-            <p  >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo
-            </p>
-            <br />
-            <p  >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo
-            </p>
-          </div>
-          <div id='imagecont'>
-          <StaticImage
-          style={{width: "100%"}}
-          src='../../images/features.webp'
-          alt='jopa'
-          />
-          </div>
-           
+    <>
+      <FeaturesContainer>
+        <div   >
+        <h2 id='maint' className='m-4' >Buying a home shouldn't be a mystery</h2>
         </div>
-        <h2 id='mobilet' className='m-4' >Buying a home shouldn't be a mystery</h2>
-    </FeaturesContainer>
+          <div id="contents" className='d-flex f-direction-column justify-content-center align-items-center ' >
+            <div  id='texts' >
+              <p  >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo
+              </p>
+              <br />
+              <p  >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo
+              </p>
+              <br />
+              <p  >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolo
+              </p>
+            </div>
+            <div id='imagecont'>
+            <StaticImage
+            style={{width: "100%"}}
+            src='../../images/features.webp'
+            alt='jopa'
+            />
+            </div>
+            
+          </div>
+          <h2 id='mobilet' className='m-4' >Buying a home shouldn't be a mystery</h2>
+          
+      </FeaturesContainer>
+      <FeaturesContainer>
+        <GridContainer>
+        <div className='element' >sdds</div>
+        <div className='element' >sdds</div>
+        <div className='element' >sdds</div>
+        </GridContainer>
+      </FeaturesContainer>
+    </>
+    
+    
   )
 }
 

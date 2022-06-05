@@ -66,7 +66,16 @@ const GridContainer = styled.div`
     background-color: pink;
 
   }
+  .card {
+    width: 400px;
+  }
   @media (max-width: 425px) {
+    .card {
+    width: 90vw;
+  }
+    .imageCont {
+    width: 90vw;
+  }
     .element {
     width: 90vw;
     height: 90vw;
@@ -112,9 +121,48 @@ const Features = () => {
       </FeaturesContainer>
       <FeaturesContainer>
         <GridContainer>
-        <div className='element' >sdds</div>
-        <div className='element' >sdds</div>
-        <div className='element' >sdds</div>
+
+        <div className='card mx-2' >
+          <StaticImage
+              style={{width: "100%"}}
+              src='../../images/laptop.jpg'
+              alt='jopa'
+              />
+        
+            <div className='card-body' >
+              <h5 className='card-title' >title</h5>
+              <p className='card-text' >text lorem pipsum</p>
+            </div>
+
+        </div>
+
+
+        <div className='card mx-2' >
+        <StaticImage
+              style={{width: "100%"}}
+              src='../../images/human.jpeg'
+              alt='jopa'
+              />
+            <div className='card-body' >
+              <h5 className='card-title' >title</h5>
+              <p className='card-text' >text lorem pipsum</p>
+            </div>
+
+        </div>
+
+
+        <div className='card mx-2' >
+        <StaticImage
+              style={{width: "100%"}}
+              src='../../images/gun.jpg'
+              alt='jopa'
+              />
+            <div className='card-body' >
+              <h5 className='card-title' >title</h5>
+              <p className='card-text' >text lorem pipsum</p>
+            </div>
+
+        </div>
         </GridContainer>
       </FeaturesContainer>
     </>

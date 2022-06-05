@@ -16,7 +16,6 @@ const IndexPage = () => {
       <NavBar />
       <Home />
       <Features />
-      <Features2 />
       
     </>
     

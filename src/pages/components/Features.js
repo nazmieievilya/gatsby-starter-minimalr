@@ -60,26 +60,14 @@ const GridContainer = styled.div`
   max-width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 10px;
-  .element {
-    width: 400px;
-    height: 400px;
-    background-color: pink;
-
-  }
+  margin: 0;
+      padding: 0;
   .card {
     width: 400px;
   }
   @media (max-width: 425px) {
     .card {
-    width: 90vw;
-  }
-    .imageCont {
-    width: 90vw;
-  }
-    .element {
-    width: 90vw;
-    height: 90vw;
-    margin: 5vw;;
+    width: 95vw;
   }
   }
 

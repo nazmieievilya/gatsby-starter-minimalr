@@ -25,12 +25,12 @@ const GridContainer = styled.div`
     .element {
     width: 90vw;
     height: 90vw;
-    margin: 5vw;;
+    margin: 5vw;
   }
   }
 
 `
-const Features2 = () => {
+const Featuresgrid = () => {
   return (
     <FeaturesContainer>
        <GridContainer>
@@ -42,4 +42,4 @@ const Features2 = () => {
   )
 }
 
-export default Features2
+export default Featuresgrid

@@ -33,11 +33,11 @@ const GridContainer = styled.div`
 const Featuresgrid = () => {
   return (
     <FeaturesContainer>
-       <GridContainer>
+       {/* <GridContainer>
         <div className='element' >sdds</div>
         <div className='element' >sdds</div>
         <div className='element' >sdds</div>
-       </GridContainer>
+       </GridContainer> */}
     </FeaturesContainer>
   )
 }

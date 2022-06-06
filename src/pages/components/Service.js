@@ -15,8 +15,7 @@ const ServiceContainer = styled.div`
       width: 10vw;
       background-color: yellow;
       margin: 10px;
-      
-    padding: 0px;
+      padding: 0px;
     }
   }
   .serviceCont {

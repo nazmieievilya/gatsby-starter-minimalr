@@ -6,8 +6,8 @@ const ServiceContainer = styled.div`
   max-width: 100vw;
   margin: 0 auto;
   display: grid;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -30,7 +30,6 @@ const ServiceContainer = styled.div`
     color: black;
   }
   @media (max-width: 768px) {
-    padding: 0px;
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);

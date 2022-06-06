@@ -13,7 +13,6 @@ const App = () => {
       <Features />
       <Form />
       <Service />
-      
     </>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 const ServiceContainer = styled.div`
   background-color: white;
   display: flex;
@@ -8,39 +7,38 @@ const ServiceContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 30vw;
-
+  @media (max-width: 768px) {
+    justify-content: center;
+    .serviceCont {
+      display: flex;
+      height: 10vw;
+      width: 10vw;
+      background-color: yellow;
+      margin: 10px;
+      
+    padding: 0px;
+    }
+  }
   .serviceCont {
     display: flex;
     height: 10vw;
     width: 20vw;
+    background-color: yellow;
   }
   h3 {
-    padding: 0;
     color: black;
     font-size: 3vw;
   }
   p {
     color: black;
-    font-size: 3vw;
-  }
-  @media (max-width: 768px) {
-    padding: 0px;
-    justify-content: center;
-    .serviceCont {
-      display: flex;
-      height: 20vw;
-      width: 40vw;
-      margin: 10px;
-
-      padding: 0px;
-    }
+    font-size: 2vw;
   }
 `;
 const Service = () => {
   return (
     <ServiceContainer>
       <div className="serviceCont">
-        <div className="text-primary me-1">
+        <div className="text-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="5vw"
@@ -55,13 +53,13 @@ const Service = () => {
             />
           </svg>
         </div>
-        <div>
+        <div style={{ backgroundColor: "violet" }}>
           <h3>Total transpatency</h3>
           <p>lorem pipsum </p>
         </div>
       </div>
       <div className="serviceCont">
-        <div className="text-primary me-1">
+        <div className="text-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="5vw"
@@ -76,13 +74,13 @@ const Service = () => {
             />
           </svg>
         </div>
-        <div>
+        <div style={{ backgroundColor: "violet" }}>
           <h3>Total transpatency</h3>
           <p>lorem pipsum </p>
         </div>
       </div>
       <div className="serviceCont">
-        <div className="text-primary me-1">
+        <div className="text-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="5vw"
@@ -97,7 +95,7 @@ const Service = () => {
             />
           </svg>
         </div>
-        <div>
+        <div style={{ backgroundColor: "violet" }}>
           <h3>Total transpatency</h3>
           <p>lorem pipsum </p>
         </div>

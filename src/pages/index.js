@@ -1,12 +1,9 @@
-import * as React from "react"
-import { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import { GlobalStyle } from "../globalStyles/globalStyles"
-import NavBar from "./components/NavBar"
+import * as React from "react";
+import { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { GlobalStyle } from "../globalStyles/globalStyles";
 import 'bootstrap/dist/css/bootstrap.css';
-import Home from "./components/Home";
-import Features from './components/Features'
-import Form from "./components/Form"
+import App from "./components/App";
 
 const IndexPage = () => {
  
@@ -14,10 +11,7 @@ const IndexPage = () => {
   return (
     <>
       <GlobalStyle />
-      <NavBar />
-      <Home />
-      <Features />
-      <Form />      
+      <App />
     </>
     
   )

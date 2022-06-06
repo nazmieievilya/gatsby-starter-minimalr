@@ -8,36 +8,41 @@ const ServiceContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 30vw;
-  @media (max-width: 768px) {
-    justify-content: center;
-    .serviceCont {
-      display: flex;
-      height: 10vw;
-      width: 10vw;
-      margin: 10px;
-
-      padding: 0px;
-    }
-  }
+  
   .serviceCont {
     display: flex;
     height: 10vw;
     width: 20vw;
+    
+
   }
   h3 {
+    padding: 0;
     color: black;
     font-size: 3vw;
   }
   p {
     color: black;
-    font-size: 2vw;
+    font-size: 3vw;
+  }
+  @media (max-width: 768px) {
+    padding: 0px;
+    justify-content: center;
+    .serviceCont {
+      display: flex;
+      height: 20vw;
+      width: 40vw;
+      margin: 10px;
+
+      padding: 0px;
+    }
   }
 `;
 const ServiceComp = () => {
   return (
     <ServiceContainer>
       <div className="serviceCont">
-        <div className="text-primary">
+        <div className="text-primary me-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="5vw"
@@ -58,7 +63,7 @@ const ServiceComp = () => {
         </div>
       </div>
       <div className="serviceCont">
-        <div className="text-primary">
+        <div className="text-primary me-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="5vw"
@@ -79,7 +84,7 @@ const ServiceComp = () => {
         </div>
       </div>
       <div className="serviceCont">
-        <div className="text-primary">
+        <div className="text-primary me-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="5vw"

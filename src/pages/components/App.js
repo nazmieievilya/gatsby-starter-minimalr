@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import Features from "./Features";
 import Form from "./Form";
-import ServiceComp from "./ServiceComp";
+import Service from "./Service";
 
 const App = () => {
   return (
@@ -12,7 +12,8 @@ const App = () => {
       <Home />
       <Features />
       <Form />
-      <ServiceComp />
+      <Service />
+      
     </>
   );
 };

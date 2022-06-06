@@ -61,7 +61,9 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 10px;
   margin: 0;
-      padding: 0;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  padding: 0;
   .card {
     width: 400px;
   }

@@ -1,9 +1,8 @@
-import React from 'react'
-import NavBar from './NavBar'
-import Home from './Home'
-import Features from './Features'
-import Form from './Form'
-
+import React from "react";
+import NavBar from "./NavBar";
+import Home from "./Home";
+import Features from "./Features";
+import Form from "./Form";
 
 const App = () => {
   return (
@@ -11,9 +10,9 @@ const App = () => {
       <NavBar />
       <Home />
       <Features />
-      <Features />
+      <Form />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

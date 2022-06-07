@@ -35,7 +35,7 @@ const LandingText = styled.div`
 
 const Home = () => {
   return (
-    <HomeContainer>
+    <HomeContainer id="home" >
       <TextContainer>
         <LandingText>
           <h2>Real Estate Company</h2>

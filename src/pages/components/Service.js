@@ -53,7 +53,7 @@ const ServiceContainer = styled.div`
 `;
 const Service = () => {
   return (
-    <ServiceContainer>
+    <ServiceContainer id="contact" >
       <div className="serviceCont">
         <div className="text-primary me-1">
           <svg

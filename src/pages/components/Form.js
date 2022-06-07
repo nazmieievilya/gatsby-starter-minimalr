@@ -16,7 +16,7 @@ const FormContainer = styled.div`
 
 const Form = () => {
   return (
-    <FormContainer>
+    <FormContainer id="contact" >
       <div>
         <h1 className="text-center py-3 display-6 px-4 text-light">
           Sign Up Now!

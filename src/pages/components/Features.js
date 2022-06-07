@@ -70,7 +70,7 @@ const GridContainer = styled.div`
 const Features = () => {
   return (
     <>
-      <FeaturesContainer>
+      <FeaturesContainer id="features" >
         <div>
           <h2 id="maint" className="m-4">
             Buying a home shouldn't be a mystery

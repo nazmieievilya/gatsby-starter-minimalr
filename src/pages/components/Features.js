@@ -12,6 +12,7 @@ const FeaturesContainer = styled.div`
   width: 100%;
   #texts {
     width: 40%;
+    margin-top: 10px;
   }
   #mobilet {
     display: none;
@@ -21,7 +22,6 @@ const FeaturesContainer = styled.div`
   #imagecont {
     @media (max-width: 768px) {
       width: 90%;
-      padding-top: 5vw;
     }
   }
   @media (max-width: 768px) {

@@ -27,7 +27,10 @@ const LandingText = styled.div`
   margin-top: 40px;
   font-weight: 5;
   color: white;
-  font-size: 3vw;
+  font-size: 2vw;
+  @media (max-width: 768px) {
+    font-size: 3vw;
+  }
 `;
 
 const Home = () => {
@@ -48,7 +51,7 @@ const Home = () => {
         </LandingText>
       </TextContainer>
       <span>
-        <StaticImage
+      <StaticImage
           style={{ position: "fixed", width: "100%", height: "100%" }}
           src="../../images/home.png"
           alt="jopa"

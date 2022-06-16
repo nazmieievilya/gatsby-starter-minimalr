@@ -28,6 +28,9 @@ const LandingText = styled.div`
   font-weight: 5;
   color: white;
   font-size: 2vw;
+  @media (min-width: 1500px) {
+    font-size: 1.2vw;
+  }
   @media (max-width: 768px) {
     font-size: 3vw;
   }

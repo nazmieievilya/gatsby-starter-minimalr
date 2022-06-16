@@ -24,6 +24,11 @@ const FooterContainer = styled.div`
     margin: 2vw;
     color: white;
   }
+  @media (min-width: 1500px) {
+    li {
+      font-size: 1.2vw;
+    }
+  }
   @media (max-width: 478px) {
     li {
       font-size: 3.5vw;

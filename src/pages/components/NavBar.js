@@ -2,49 +2,12 @@ import React from "react";
 import styled, { keyframes, css } from "styled-components";
 import { useEffect, useState } from "react";
 import { Link } from "gatsby";
-const CloseButton = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 5px;
-  top: 0;
-  width: 100%;
-`;
+import MobileMenu from "src/pages/components/MobileMenu";
+
 const NavBar = () => {
   const [background, setBackground] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const StyledLinkMobile = styled((props) => <Link {...props} />)`
-    color: white;
-    text-decoration: none;
 
-    :hover {
-      color: gray;
-    }
-  `;
-  const MobileMenuList = styled.div`
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    li {
-      list-style: none;
-    }
-  `;
-  const StyleShowMenu = {
-    right: showMenu ? "0%" : "-70%",
-    padding: "0",
-    zIndex: "300",
-    position: "fixed",
-    width: "70%",
-    height: "100vh",
-    display: "flex",
-    alignItems: "center",
-    fontSize: "2rem",
-    color: "white",
-    flexDirection: "column",
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
-    transition: "all 0.5s ease",
-  };
   useEffect(() => {
     const changeBackground = () => {
       if (window.scrollY > 200) {
@@ -58,27 +21,13 @@ const NavBar = () => {
   }, [background]);
   console.log(background);
   const StyledLink = styled((props) => <Link {...props} />)`
+    margin-right: 10px;
     color: ${background ? "black" : "white"};
     text-decoration: none;
     :hover {
       color: gray;
     }
   `;
-  const changingBackgroundColor = keyframes`
- 
-  to {
-    background-color: white;
-  }
-  `;
-  const enter = keyframes`
-  from {
-    
-    opacity: 0;}
-  to {
-    
-    opacity: 1;
-    }
-`;
 
   const update = keyframes`
   0% {background-color: transparent;}
@@ -88,7 +37,6 @@ const NavBar = () => {
     color: ${background ? "black" : "white"};
     padding: 0;
     padding-right: 10px;
-    padding-left: 10px;
     z-index: 50;
     top: 0;
     display: flex;
@@ -142,35 +90,7 @@ const NavBar = () => {
   `;
   return (
     <>
-      <div style={StyleShowMenu}>
-        <CloseButton
-          onClick={() => setShowMenu((prevShowMenu) => !prevShowMenu)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="currentColor"
-            class="bi bi-x"
-            viewBox="0 0 16 16"
-          >
-            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-          </svg>
-        </CloseButton>
-        <MobileMenuList>
-          <ul>
-            <li>
-              <StyledLinkMobile to="#home">home</StyledLinkMobile>
-            </li>
-            <li>
-              <StyledLinkMobile to="#features">features</StyledLinkMobile>
-            </li>
-            <li>
-              <StyledLinkMobile to="#contact">contact</StyledLinkMobile>
-            </li>
-          </ul>
-        </MobileMenuList>
-      </div>
+      <MobileMenu showMenu={showMenu} setShowMenu={setShowMenu} />
       <NavContainer background={background}>
         <LogoCont>
           <li>
@@ -221,7 +141,7 @@ const NavBar = () => {
 
 const LogoCont = styled.ul`
   font-size: 90%;
-  padding: 0;
+  padding: 5px;
   height: 100%;
   margin: 0;
   display: flex;
@@ -234,6 +154,10 @@ const LogoCont = styled.ul`
   }
 `;
 const List = styled.ul`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
   height: 100%;
   margin: 0;
   display: flex;

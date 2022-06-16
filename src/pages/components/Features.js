@@ -19,7 +19,15 @@ const FeaturesContainer = styled.div`
     visibility: hidden;
   }
 
+  @media (min-width: 1500px) {
+    #texts {
+      p {
+        font-size: 1.1vw;
+      }
+    }
+  }
   #imagecont {
+    margin: 10px;
     @media (max-width: 768px) {
       width: 90%;
     }
@@ -70,7 +78,7 @@ const GridContainer = styled.div`
 const Features = () => {
   return (
     <>
-      <FeaturesContainer id="features" >
+      <FeaturesContainer id="features">
         <div>
           <h2 id="maint" className="m-4">
             Buying a home shouldn't be a mystery

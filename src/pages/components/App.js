@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "./NavBar";
-import Home from "./Home";
-import Features from "./Features";
-import Form from "./Form";
-import Service from "./Service";
-import FooterComp from "./FooterComp";
+import NavBar from "src/pages/components/NavBar";
+import Home from "src/pages/components/Home";
+import Features from "src/pages/components/Features";
+import Form from "src/pages/components/Form";
+import Service from "src/pages/components/Service";
+import FooterComp from "src/pages/components/FooterComp";
 
 const App = () => {
   return (

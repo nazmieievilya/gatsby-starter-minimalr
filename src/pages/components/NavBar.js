@@ -13,20 +13,20 @@ const NavBar = () => {
   const [background, setBackground] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const StyledLinkMobile = styled((props) => <Link {...props} />)`
-  color: white;
-  text-decoration: none;
- 
-  :hover {
-    color: gray;
-  }
-`;
+    color: white;
+    text-decoration: none;
+
+    :hover {
+      color: gray;
+    }
+  `;
   const MobileMenuList = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    li{
+    li {
       list-style: none;
     }
   `;
@@ -67,6 +67,7 @@ const NavBar = () => {
   const NavContainer = styled.div`
     color: ${background ? "black" : "white"};
     background-color: ${background ? "white" : "transparant"};
+    padding: 0;
     padding-right: 10px;
     padding-left: 10px;
     z-index: 50;
@@ -79,12 +80,28 @@ const NavBar = () => {
     position: fixed;
     font-size: 2vw;
     transition: 0.2s all ease;
+    .buttons {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      button {
+        margin: 0;
+        font-size: 1vw;
+        text-align: center;
+        min-height: 2vw;
+        min-width: 4vw;
+      }
+    }
+    @media (min-width: 2000px) {
+      height: 2.5vw;
+    }
 
     .menu {
       display: none;
       visibility: hidden;
     }
     @media (max-width: 768px) {
+      justify-content: flex-end;
       .buttons {
         display: none;
         visibility: hidden;
@@ -119,9 +136,7 @@ const NavBar = () => {
         <MobileMenuList>
           <ul>
             <li>
-              <StyledLinkMobile to="#home">
-                home
-              </StyledLinkMobile>
+              <StyledLinkMobile to="#home">home</StyledLinkMobile>
             </li>
             <li>
               <StyledLinkMobile to="#features">features</StyledLinkMobile>
@@ -133,7 +148,13 @@ const NavBar = () => {
         </MobileMenuList>
       </div>
       <NavContainer>
-        <h5>something</h5>
+        <List>
+          <li>
+            <StyledLink textDecoration="none" to="#home">
+              RE
+            </StyledLink>
+          </li>
+        </List>
         <List>
           <li>
             <StyledLink textDecoration="none" to="#home">

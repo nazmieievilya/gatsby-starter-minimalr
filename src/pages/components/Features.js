@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
 const FeaturesContainer = styled.div`
+  background-color: blueviolet;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -57,10 +58,9 @@ const FeaturesContainer = styled.div`
 `;
 
 const GridContainer = styled.div`
-  display: grid;
-  max-width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 10px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
   margin: 0;
   margin-top: 5vw;
   margin-bottom: 5vw;
@@ -68,7 +68,18 @@ const GridContainer = styled.div`
   .card {
     width: 400px;
   }
-  @media (max-width: 425px) {
+  @media (min-width: 1289px) {
+    display: flex;
+    justify-content: space-around;
+    .card {
+      height: 400px;
+      width: 600px;
+    }
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .card {
       width: 95vw;
     }

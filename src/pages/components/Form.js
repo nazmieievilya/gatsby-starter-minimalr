@@ -2,6 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 const FormContainer = styled.div`
+  input {
+    font-size: 1vw;
+    text-align: center;
+    min-height: 2vw;
+    min-width: 4vw;
+  }
+
+  button {
+    font-size: 1vw;
+    min-height: 2vw;
+    min-width: 4vw;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +28,7 @@ const FormContainer = styled.div`
 
 const Form = () => {
   return (
-    <FormContainer id="contact" >
+    <FormContainer id="contact">
       <div>
         <h1 className="text-center py-3 display-6 px-4 text-light">
           Sign Up Now!

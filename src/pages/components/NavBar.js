@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { useEffect, useState } from "react";
 import { Link } from "gatsby";
 const CloseButton = styled.div`
@@ -55,7 +55,7 @@ const NavBar = () => {
     };
     window.addEventListener("scroll", changeBackground);
     return () => window.removeEventListener("scroll", changeBackground);
-  }, []);
+  }, [background]);
   console.log(background);
   const StyledLink = styled((props) => <Link {...props} />)`
     color: ${background ? "black" : "white"};
@@ -64,9 +64,28 @@ const NavBar = () => {
       color: gray;
     }
   `;
+  const changingBackgroundColor = keyframes`
+ 
+  to {
+    background-color: white;
+  }
+  `;
+  const enter = keyframes`
+  from {
+    
+    opacity: 0;}
+  to {
+    
+    opacity: 1;
+    }
+`;
+
+  const update = keyframes`
+  0% {background-color: transparent;}
+  100% {background-color: white;}
+`;
   const NavContainer = styled.div`
     color: ${background ? "black" : "white"};
-    background-color: ${background ? "white" : "transparant"};
     padding: 0;
     padding-right: 10px;
     padding-left: 10px;
@@ -79,7 +98,12 @@ const NavBar = () => {
     width: 100%;
     position: fixed;
     font-size: 2vw;
-    transition: 0.2s all ease;
+    animation: ${({ background }) =>
+      background
+        ? css`
+            ${update} 0.7s linear forwards
+          `
+        : "none"};
     .buttons {
       height: 100%;
       display: flex;
@@ -101,14 +125,14 @@ const NavBar = () => {
       visibility: hidden;
     }
     @media (max-width: 768px) {
-      justify-content: flex-end;
+      justify-content: space-between;
       .buttons {
         display: none;
         visibility: hidden;
       }
       .menu {
         display: block;
-        visibility: visible;
+        visibility: ${showMenu ? "hidden" : "visible"};
       }
     }
 
@@ -147,14 +171,14 @@ const NavBar = () => {
           </ul>
         </MobileMenuList>
       </div>
-      <NavContainer>
-        <List>
+      <NavContainer background={background}>
+        <LogoCont>
           <li>
             <StyledLink textDecoration="none" to="#home">
               RE
             </StyledLink>
           </li>
-        </List>
+        </LogoCont>
         <List>
           <li>
             <StyledLink textDecoration="none" to="#home">
@@ -195,6 +219,20 @@ const NavBar = () => {
   );
 };
 
+const LogoCont = styled.ul`
+  font-size: 90%;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  @media (max-width: 425px) {
+    font-size: 100%;
+  }
+  li {
+    display: inline;
+  }
+`;
 const List = styled.ul`
   height: 100%;
   margin: 0;
